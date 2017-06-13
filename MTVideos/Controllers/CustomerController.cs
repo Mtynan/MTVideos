@@ -25,6 +25,14 @@ namespace MTVideos.Controllers
         public ActionResult Index()
         {
             var customers = _context.Customers.ToList();
+
+            return View(customers);
+        }
+
+        public ActionResult Details(int Id)
+        {
+            var customers = _context.Customers.SingleOrDefault(c => c.Id == Id);
+
             return View(customers);
         }
     }
