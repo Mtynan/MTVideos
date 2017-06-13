@@ -1,5 +1,14 @@
 ﻿@model MTVideos.Models.Customer
 
-@Model.Name
-@Model.Birthdate
-@Model.IsSubscribed
+
+<h2>@Model.Name</h2>
+
+<ul>
+    @if (Model.Birthdate.HasValue)
+    {
+        <li>D.O.B @Model.Birthdate</li>
+    }
+    <li>Subscribed to Newsletter? @Model.IsSubscribed </li>
+    <li>Type of Membership: @Model.MembershipType.TypeOfMembership </li>
+   
+</ul>

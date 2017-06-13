@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace MTVideos.Controllers
 {
@@ -24,14 +25,14 @@ namespace MTVideos.Controllers
 
         public ActionResult Index()
         {
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
             return View(customers);
         }
 
         public ActionResult Details(int Id)
         {
-            var customers = _context.Customers.SingleOrDefault(c => c.Id == Id);
+            var customers = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == Id);
 
             return View(customers);
         }

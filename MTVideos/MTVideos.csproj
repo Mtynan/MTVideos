@@ -203,6 +203,10 @@
     <Compile Include="Migrations\201706131919542_AddedDatatoMembershipTypeDB.Designer.cs">
       <DependentUpon>201706131919542_AddedDatatoMembershipTypeDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706132005128_AddingTyoeOfNMembershipValue.cs" />
+    <Compile Include="Migrations\201706132005128_AddingTyoeOfNMembershipValue.Designer.cs">
+      <DependentUpon>201706132005128_AddingTyoeOfNMembershipValue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -297,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706131919542_AddedDatatoMembershipTypeDB.resx">
       <DependentUpon>201706131919542_AddedDatatoMembershipTypeDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706132005128_AddingTyoeOfNMembershipValue.resx">
+      <DependentUpon>201706132005128_AddingTyoeOfNMembershipValue.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
