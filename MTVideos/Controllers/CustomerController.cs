@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MTVideos.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,23 @@ namespace MTVideos.Controllers
 {
     public class CustomerController : Controller
     {
-        // GET: Customer
+        private ApplicationDbContext _context;
+
+        public CustomerController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+
         public ActionResult Index()
         {
-            return View();
+            var customers = _context.Customers.ToList();
+            return View(customers);
         }
     }
 }
