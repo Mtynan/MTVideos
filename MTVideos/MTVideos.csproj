@@ -208,6 +208,18 @@
     <Compile Include="Migrations\201706132005128_AddingTyoeOfNMembershipValue.Designer.cs">
       <DependentUpon>201706132005128_AddingTyoeOfNMembershipValue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706132033142_AddedMoviesandGenreTable.cs" />
+    <Compile Include="Migrations\201706132033142_AddedMoviesandGenreTable.Designer.cs">
+      <DependentUpon>201706132033142_AddedMoviesandGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706132034311_AddedMoviesandGenreTable1.cs" />
+    <Compile Include="Migrations\201706132034311_AddedMoviesandGenreTable1.Designer.cs">
+      <DependentUpon>201706132034311_AddedMoviesandGenreTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706132036039_AddedGenreValues.cs" />
+    <Compile Include="Migrations\201706132036039_AddedGenreValues.Designer.cs">
+      <DependentUpon>201706132036039_AddedGenreValues.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -279,10 +291,10 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Shared\_navBar.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Movies\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -308,6 +320,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706132005128_AddingTyoeOfNMembershipValue.resx">
       <DependentUpon>201706132005128_AddingTyoeOfNMembershipValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706132033142_AddedMoviesandGenreTable.resx">
+      <DependentUpon>201706132033142_AddedMoviesandGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706132034311_AddedMoviesandGenreTable1.resx">
+      <DependentUpon>201706132034311_AddedMoviesandGenreTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706132036039_AddedGenreValues.resx">
+      <DependentUpon>201706132036039_AddedGenreValues.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
