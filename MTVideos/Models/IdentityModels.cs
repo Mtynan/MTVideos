@@ -20,6 +20,8 @@ namespace MTVideos.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Customer> Customer { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -27,6 +29,7 @@ namespace MTVideos.Models
 
         public static ApplicationDbContext Create()
         {
+            
             return new ApplicationDbContext();
         }
     }
