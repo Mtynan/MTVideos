@@ -6,7 +6,7 @@
 <ul>
     @if (Model.Birthdate.HasValue)
     {
-        <li>D.O.B @Model.Birthdate</li>
+        <li>D.O.B - @Model.Birthdate.Value.ToShortDateString()</li>
     }
     <li>Subscribed to Newsletter? @Model.IsSubscribed </li>
     <li>Type of Membership: @Model.MembershipType.TypeOfMembership </li>
