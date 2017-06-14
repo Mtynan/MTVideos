@@ -28,5 +28,12 @@ namespace MTVideos.Controllers
 
             return View(movies);
         }
+
+        public ActionResult Details(int id)
+        {
+            var movies = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+
+            return View(movies);
+        }
     }
 }
