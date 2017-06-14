@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using MTVideos.ViewModels;
 
 namespace MTVideos.Controllers
 {
@@ -35,6 +36,18 @@ namespace MTVideos.Controllers
             var customers = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == Id);
 
             return View(customers);
+        }
+
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipType = membershipTypes
+            };
+
+            return View(viewModel);
         }
     }
 }
