@@ -49,5 +49,14 @@ namespace MTVideos.Controllers
 
             return View(viewModel);
         }
+
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customer");
+        }
     }
 }
