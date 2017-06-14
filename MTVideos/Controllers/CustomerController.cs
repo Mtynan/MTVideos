@@ -47,7 +47,7 @@ namespace MTVideos.Controllers
                 MembershipType = membershipTypes
             };
 
-            return View(viewModel);
+            return View("CustomerForm", viewModel);
         }
 
         [HttpPost]
@@ -73,7 +73,7 @@ namespace MTVideos.Controllers
                 MembershipType = _context.MembershipTypes.ToList()
             };
 
-            return View("New", viewModel);
+            return View("CustomerForm", viewModel);
         }
     }
 }
