@@ -23,6 +23,7 @@ namespace MTVideos.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movies> Movies { get; set; }
         public DbSet <MembershipType> MembershipTypes { get; set; }
+        public DbSet<Genres> Genres { get; set; }
 
 
         public ApplicationDbContext()

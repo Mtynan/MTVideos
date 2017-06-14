@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using MTVideos.Models;
+using MTVideos.ViewModels;
 
 namespace MTVideos.Controllers
 {
@@ -34,6 +35,18 @@ namespace MTVideos.Controllers
             var movies = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
 
             return View(movies);
+        }
+
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", viewModel);
         }
     }
 }
