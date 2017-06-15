@@ -228,6 +228,18 @@
     <Compile Include="Migrations\201706142256034_testnulldatetimeinmovies1.Designer.cs">
       <DependentUpon>201706142256034_testnulldatetimeinmovies1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706151955327_testchangebytetointMoviesid.cs" />
+    <Compile Include="Migrations\201706151955327_testchangebytetointMoviesid.Designer.cs">
+      <DependentUpon>201706151955327_testchangebytetointMoviesid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706151958534_testmigration.cs" />
+    <Compile Include="Migrations\201706151958534_testmigration.Designer.cs">
+      <DependentUpon>201706151958534_testmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706152005117_testingschemeannotations.cs" />
+    <Compile Include="Migrations\201706152005117_testingschemeannotations.Designer.cs">
+      <DependentUpon>201706152005117_testingschemeannotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -348,6 +360,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706142256034_testnulldatetimeinmovies1.resx">
       <DependentUpon>201706142256034_testnulldatetimeinmovies1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706151955327_testchangebytetointMoviesid.resx">
+      <DependentUpon>201706151955327_testchangebytetointMoviesid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706151958534_testmigration.resx">
+      <DependentUpon>201706151958534_testmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706152005117_testingschemeannotations.resx">
+      <DependentUpon>201706152005117_testingschemeannotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

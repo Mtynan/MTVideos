@@ -1,9 +1,9 @@
 ﻿@model MTVideos.ViewModels.MovieFormViewModel
 @{
-    ViewBag.Title = "MovieForm";
+    ViewBag.Title = Model.Title;
 }
 
-<h2>MovieForm</h2>
+<h2>@Model.Title</h2>
 
 
 @using (Html.BeginForm("Save", "Movies"))
