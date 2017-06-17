@@ -240,6 +240,18 @@
     <Compile Include="Migrations\201706152005117_testingschemeannotations.Designer.cs">
       <DependentUpon>201706152005117_testingschemeannotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706152010200_cleanmigration.cs" />
+    <Compile Include="Migrations\201706152010200_cleanmigration.Designer.cs">
+      <DependentUpon>201706152010200_cleanmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706152017547_cleanmigration1.cs" />
+    <Compile Include="Migrations\201706152017547_cleanmigration1.Designer.cs">
+      <DependentUpon>201706152017547_cleanmigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171937500_addedRequiredAttributetoCustomerName.cs" />
+    <Compile Include="Migrations\201706171937500_addedRequiredAttributetoCustomerName.Designer.cs">
+      <DependentUpon>201706171937500_addedRequiredAttributetoCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -369,6 +381,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706152005117_testingschemeannotations.resx">
       <DependentUpon>201706152005117_testingschemeannotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706152010200_cleanmigration.resx">
+      <DependentUpon>201706152010200_cleanmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706152017547_cleanmigration1.resx">
+      <DependentUpon>201706152017547_cleanmigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171937500_addedRequiredAttributetoCustomerName.resx">
+      <DependentUpon>201706171937500_addedRequiredAttributetoCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
