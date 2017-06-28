@@ -19,7 +19,7 @@ namespace MTVideos.Models
        
         public MembershipType MembershipType { get; set; }
 
-        [Display(Name = "MembershipType")]
+        [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
 
     }
