@@ -14,18 +14,26 @@ namespace MTVideos.Models
         public byte Id { get; set; }
         public string Name { get; set; }
 
+        
         [Display(Name = "Date Released")]
+        [Required]
         public DateTime DateReleased { get; set; }
 
+        
         [Display(Name = "Date Added")]
+        [Required]
         public DateTime DateAdded { get; set; }
 
+        
         [Display(Name = "Number In Stock")]
+        [Range(1,20)]
+        [Required]
         public int NumberInStock { get; set; }
 
         public Genres Genre { get; set; }
-
+      
         [Display(Name = "Genre")]
+        [Required]
         public byte GenreId { get; set; }
     }
 }

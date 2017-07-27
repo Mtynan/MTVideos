@@ -52,7 +52,18 @@ namespace MTVideos.Controllers
 
         [HttpPost]
         public ActionResult Save(Movies movies)
-        {       
+        {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Genres = _context.Genres.ToList()
+
+                };
+
+                return View("MovieForm", viewModel);
+            }
+
             if (movies.Id == 0)
             {
                 movies.DateAdded = DateTime.Now;
