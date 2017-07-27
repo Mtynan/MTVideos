@@ -44,6 +44,7 @@ namespace MTVideos.Controllers
 
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),
                 MembershipType = membershipTypes
             };
 
