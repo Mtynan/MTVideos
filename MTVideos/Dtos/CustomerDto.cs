@@ -13,7 +13,8 @@ namespace MTVideos.Dtos
         [Required]
         public string Name { get; set; }
 
- 
+        public MembershipTypeDto MembershipType { get; set; }
+
         //[Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
 
