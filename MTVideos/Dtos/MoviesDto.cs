@@ -11,7 +11,9 @@ namespace MTVideos.Dtos
  
         public byte Id { get; set; }
         public string Name { get; set; }
-    
+
+        public GenreDto Genre { get; set; }
+
         [Required]
         public DateTime DateReleased { get; set; }
 

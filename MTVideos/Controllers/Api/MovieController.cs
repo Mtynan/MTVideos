@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MTVideos.Dtos;
 using MTVideos.Models;
+using System.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,10 @@ namespace MTVideos.Controllers.Api
 
         public IEnumerable<MoviesDto> GetMovies()
         {
-            return _context.Movies.ToList().Select(Mapper.Map<Movies, MoviesDto>);
+            return _context.Movies
+                .Include(c => c.Genre)
+                .ToList()
+                .Select(Mapper.Map<Movies, MoviesDto>);
         }
 
         public IHttpActionResult GetMovie(int id)
