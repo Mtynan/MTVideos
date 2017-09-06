@@ -21,7 +21,7 @@ namespace MTVideos.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        public IEnumerable<MoviesDto> GetMovies()
+        public IEnumerable<MoviesDto> GetMovies(string query = null)
         {
             return _context.Movies
                 .Include(c => c.Genre)
