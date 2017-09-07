@@ -97,9 +97,6 @@
 
           var validator = $("#newRental").validate({
                 submitHandler: function () {
-
-                    e.preventDefault();
-
                     $.ajax({
                         url: "/api/Rental",
                         method: "post",

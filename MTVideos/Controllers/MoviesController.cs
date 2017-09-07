@@ -53,24 +53,26 @@ namespace MTVideos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movies movies)
         {
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new MovieFormViewModel
-                {
-                    Genres = _context.Genres.ToList()
+            //if (!ModelState.IsValid)
+            //{
+            //    var viewModel = new MovieFormViewModel
+            //    {
+            //        Genres = _context.Genres.ToList()
 
-                };
-
-                return View("MovieForm", viewModel);
-            }
+            //    };
+            //    return View("MovieForm", viewModel);
+            //}
 
             if (movies.Id == 0)
             {
                 movies.DateAdded = DateTime.Now;
+                movies.NumberAvailable = Convert.ToByte(movies.NumberInStock);
                 _context.Movies.Add(movies);
+                Console.WriteLine("Added movie to db");
             }
             else
             {
